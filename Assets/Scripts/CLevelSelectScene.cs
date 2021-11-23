@@ -10,7 +10,6 @@ public class CLevelSelectScene : MonoBehaviour
     [SerializeField] GameObject iconPanel;
     List<CLevelConfig> levelConfigsList;
     private int currentLevelCount = 0;
-    //GameObject lvlCompltdImage;
     private int lvlCount;
 
     private void Awake()

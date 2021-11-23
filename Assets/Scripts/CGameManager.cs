@@ -44,13 +44,11 @@ public class CGameManager : MonoBehaviour
         if (PlayerPrefs.HasKey("gameData"))
         {
            mGameData.LoadLevelConfigList();
-            //PlayerPrefs.DeleteKey("gameData");
         }
         else
         {
            mGameData.CreateLevelConfigList();
         }
-         //mGameData.CreateLevelConfigList();
 
     }
     private void Initialization()

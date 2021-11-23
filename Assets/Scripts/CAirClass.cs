@@ -4,18 +4,9 @@ using UnityEngine;
 
 public class CAirClass : MonoBehaviour
 {
-    public enum EWeaponType
-    {
-        mainWeapon,
-    }
-
-    [SerializeField] EWeaponType eWeaponType = EWeaponType.mainWeapon;
-
     public Vector3 targetPosition = Vector3.zero;
     public float smoothTime = 0.3f;
     private Vector3 velocity = Vector3.zero;
-
-    List<IWeapon> weapons = new List<IWeapon>();
 
     [SerializeField] private CMainWeapon mMainWeapon;
 
@@ -39,10 +30,7 @@ public class CAirClass : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftControl))
         {
-            if (eWeaponType == EWeaponType.mainWeapon)
-            {
-                mMainWeapon.Shoot();
-            }
+            mMainWeapon.Shoot();
         }
     }
 
